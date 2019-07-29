@@ -12,7 +12,6 @@ from datetime import date, timedelta
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-#from sklearn.linear_model import LinearRegression
 #%matplotlib inline
 
 
@@ -204,11 +203,11 @@ def get_plot(day,data,plot_type):
     plt.plot(day, data, '--o', alpha = 0.7)
     for x, y in zip(day, data):
         plt.text(x, y, str("%.2f" % y), color="#0abab9", alpha = 0.5, fontsize=10)
-    plt.xticks(rotation=90, fontsize = 8)
+    plt.xticks(rotation=90)
     plt.savefig('Daily_'+plot_type+'.png',quality=100,bbox_inches = 'tight')
 
 
-# In[15]:
+# In[18]:
 
 
 def main():
